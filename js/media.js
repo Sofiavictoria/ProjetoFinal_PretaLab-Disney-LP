@@ -14,14 +14,29 @@
 
 function calcularMedia() {
   const nota1 = parseFloat(document.getElementById("nota1").value);
-  const note2 = parseFloat(document.getElementById("nota2").value);
-  const note3 = parseFloat(document.getElementById("nota3").value);
-  const note4 = parseFloat(document.getElementById("nota4").value);
+  const nota2 = parseFloat(document.getElementById("nota2").value);
+  const nota3 = parseFloat(document.getElementById("nota3").value);
+  const nota4 = parseFloat(document.getElementById("nota4").value);
 
   let mensagem = "";
   // evite mexer no código acima!
   
-
+  let resultadomedia = (nota1 + nota2 + nota3 + nota4) / 4;
+  
+  
+  if (resultadomedia == 10){
+    mensagem = `Hoje é seu aniversário? Pq você ta de parabéns! 10 de média`;
+  }else if (resultadomedia >= 7.1  ){
+    mensagem = `Notão! Sua média é ${resultadomedia}!`;
+  }else if (resultadomedia >= 6  ){
+    mensagem = `Você está na média com ${resultadomedia}` ;
+  }else if(resultadomedia >= 3.1 ){
+    mensagem = `Você obteve media ${resultadomedia}! Falta pouco para a média.` ;
+  }else if(resultadomedia >= 0.1 ){
+    mensagem = `Caramba, deu ruim, você obteve media ${resultadomedia}! Estude mais e tente novamente!`;
+  }else {
+    mensagem = `Infelizmente você zerou a prova :( `;
+  }
   
   
   
